@@ -61,3 +61,37 @@
   padding: 0;
   margin: 0;
 }
+
+
+
+.header {
+  background: #f7f5f2;
+  border-bottom: 1px solid #e6e2dc;
+  padding: 10px 15px;
+  font-family: Arial, sans-serif;
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.nav a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #555;
+  font-size: 13px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
