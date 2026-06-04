@@ -1,7 +1,9 @@
-
 /*
  * Main Styles INDEX
  */
+body {
+  background-color: #7D9CAE;
+}
 /* Main Page Layout Wrapper */
 .main-content {
   max-width: 1200px;
@@ -102,16 +104,83 @@
 }
 
 
+
+/*
+ * Main Styles About
+ */
+/* Fixes Sections 1 & 3: Forces the image and text to sit side-by-side */
+.wide-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* Ensures the text takes up the majority of the card width */
+.wide-card .card-text {
+  flex: 1;
+}
+
+/* Keeps the image square and sized correctly */
+.wide-card .card-img-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: #e0e0e0;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+/* Fixes Section 2: Forces the 4 value cards into a side-by-side grid rows */
+.classes-section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Makes the value cards look uniform and styled like your image */
+.grid-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Mobile Responsive Fix: Stacks items automatically on small screens */
+@media (max-width: 900px) {
+  .classes-section .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wide-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .classes-section .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
 /*
  * Footer Styles
  */
 /* Base Layout */
 .footer {
-  background: #7D9CAE; /* Header and footer color Light Blue */
+  background: #345461; /* Header and footer color Light Blue */
   border-bottom: 1px solid #7D9CAE;
   padding: 10px 15px;
   font-family: Arial, sans-serif;
-
+  color: #B6C9CE;
 }
 
 .footer-container {
@@ -177,7 +246,7 @@
 
 .links-section a {
   text-decoration: none;
-  color: #000000;
+  color: #FFD26A;
   font-size: 13px;
 }
 
@@ -192,7 +261,7 @@
 }
 
 .contact-section a {
-  color: #000000;
+  color: #FFD26A;
   text-decoration: none;
 }
 
@@ -213,8 +282,8 @@
  */
 
 .header {
-  background: #7D9CAE; /* Header and footer color Light Blue */
-  border-bottom: 1px solid #7D9CAE;
+  background: #345461; /* Header and footer color Light Blue */
+  border-bottom: 1px solid #345469;
   padding: 10px 15px;
   font-family: Arial, sans-serif;
 }
@@ -235,9 +304,9 @@
 }
 
 .main-name {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
-  color: #333;
+  color: #B6C9CE;
   margin: 0;
 }
 
@@ -250,7 +319,7 @@
   margin-left: 12px;
   text-decoration: none;
   font-weight: bold;
-  color: #555;
+  color: #B6C9CE;
   font-size: 17px;
   border-radius: 50%;
   border: 2px solid black;
