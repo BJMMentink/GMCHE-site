@@ -6,102 +6,124 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-  <body>
+<body class="classes-page">
+  <header id="header"></header>
 
-    <header id="header"></header>
+  <main id="classes-content" class="classes-main">
+    <section id="classes-hero" class="classes-hero">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 class="page-title">The Nitty Gritty</h1>
+        <p class="page-intro">Class sessions, dates, pricing, and what each student can expect.</p>
+      </div>
+    </section>
 
-    <h1>The Nitty Gritty - class sessions, dates and pricing</h1>
+    <section id="class-details" class="details-grid" aria-label="Class details">
+      <article id="pricing" class="info-card">
+        <h2 class="section-title">Pricing</h2>
+        <p>
+          Each student: $20 per art session.<br>
+          There are 8 sessions x $20.00 = $160.00 per semester.<br>
+          Each session is 3 hours long. That's $6.67/hour.
+        </p>
+      </article>
 
-    <!-- PRICING -->
-    <h2>Pricing</h2>
+      <article id="included" class="info-card">
+        <h2 class="section-title">What's Included</h2>
+        <p>
+          This price includes my planning and instruction, plus all supplies used for formal art projects:
+          tempera paints, watercolor paint, paint brushes, quality drawing paper, watercolor papers, ink,
+          glue, spray fixative, chalk pastels, oil pastels, fabric for ink block printing, rubber blocks for
+          linoleum block printing, clear acetate sheets, and more.
+        </p>
+        <p class="note-card">
+          Prices for art supplies have risen considerably since I taught art for $15.00 per session. The class
+          price has increased to cover the increased cost of supplies.
+        </p>
+      </article>
 
-    <p>
-      Each student: $20 per art session.<br>
-      There are 8 sessions x $20.00 = 160.00 semester.<br>
-      Each session is 3 hours long * that’s $6.67/hour
-    </p>
+      <article id="students-bring" class="info-card">
+        <h2 class="section-title">Students Bring</h2>
+        <p>
+          A good pair of scissors<br>
+          and socks or slippers to wear in the atelier.
+        </p>
+        <p class="note-card">
+          I ask that each new student pays for 3 sessions at the outset.
+        </p>
+      </article>
 
-    <!-- WHAT'S INCLUDED -->
-    <h2>What’s Included</h2>
+      <article id="class-structure" class="info-card wide-card">
+        <h2 class="section-title">Class Structure</h2>
+        <p>
+          When are the classes?<br>
+          Wednesdays and Fridays, with possible Thursday afternoon sessions.
+        </p>
+        <p class="note-card">
+          We will meet on the first and third Fridays of the month.
+        </p>
+      </article>
+    </section>
 
-    <p>
-      This price includes: My planning and instruction & all supplies used for formal art projects:<br>
-      (tempera paints, watercolor paint, paint brushes, quality drawing paper, watercolor papers, ink, glue, spray fixative, chalk pastels, oil pastels, fabric for ink block printing - rubber blocks for linoleum block, clear acetate sheets etc.)
-    </p>
+    <section id="spring-schedule" class="schedule-section">
+      <h2 class="schedule-title">Spring 2026 Schedule</h2>
 
-    <p>
-      note: prices for art supplies have risen considerably since I taught art for $15.00 per session.<br>
-      The price of the class has increased to cover the increased cost of supplies*
-    </p>
+      <div class="schedule-grid">
+        <article id="section-a" class="schedule-card">
+          <div class="schedule-art" aria-hidden="true"></div>
+          <h3 class="class-name">Wednesday (Section A)</h3>
+          <p class="class-time">12:00PM-3:00PM</p>
+          <p class="class-note">(possible opening for two additional students Spring 2026)</p>
+          <p class="class-dates">
+            Feb 6 (an actual Friday date by special arrangement with parents)<br>
+            Feb 18<br>
+            March 4 and 18<br>
+            April 8 and 22<br>
+            May 6 and 20
+          </p>
+        </article>
 
-    <!-- STUDENT REQUIREMENTS -->
-    <h2>Students Bring</h2>
+        <article id="section-b" class="schedule-card">
+          <div class="schedule-art" aria-hidden="true"></div>
+          <h3 class="class-name">Friday (Section B)</h3>
+          <p class="class-time">9:30AM-12:30PM</p>
+          <p class="class-note">(possible opening for two additional students Spring 2026)</p>
+          <p class="class-dates">
+            Feb 5 (an actual Thursday date by special arrangement with parents)<br>
+            Feb 20<br>
+            March 6 and 20<br>
+            April 10 and 24<br>
+            May 8 and 22
+          </p>
+        </article>
 
-    <p>
-      good pair of scissors<br>
-      and socks or slippers to wear in the atelier.
-    </p>
+        <article id="section-c" class="schedule-card">
+          <div class="schedule-art" aria-hidden="true"></div>
+          <h3 class="class-name">Friday (Section C)</h3>
+          <p class="class-time">1:30PM-4:30PM</p>
+          <p class="class-status">Full</p>
+        </article>
 
-    <p>
-      I ask that each new student pays for 3 sessions at the outset...
-    </p>
+        <article id="section-d" class="schedule-card">
+          <div class="schedule-art" aria-hidden="true"></div>
+          <h3 class="class-name">Thursday (Section D)</h3>
+          <p class="class-time">12:30PM-3:30PM</p>
+          <p class="class-note">A possible new section to open on February 5</p>
+          <p class="class-dates">
+            February 5 and 19<br>
+            March 5 and Tuesday, March 17 (Thursday, March 19 is my anniversary)<br>
+            April 9 and 23<br>
+            May 7 and 21
+          </p>
+          <p class="class-note">6-8 spaces available (8 students = a full class)</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <!-- CLASS STRUCTURE -->
-    <h2>Class Structure</h2>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
 
-    <p>
-      When are the Classes?<br>
-      Wednesdays, and Fridays - And Possible Thursday afternoons
-    </p>
-
-    <p>
-      We will meet on the first and third Fridays of the Month...
-    </p>
-
-    <!-- SCHEDULE -->
-    <h2>Spring 2026 Schedule</h2>
-
-    <h3>Wednesday (Section A) - 12:00PM–3:00PM</h3>
-    <p>
-      (possible opening for two additional students Spring 2026)<br><br>
-      Feb 6 (an actual FRIDAY date by special arrangement with parents)<br>
-      Feb 18<br>
-      March 4 and 18<br>
-      April 8 and 22<br>
-      May 6 and 20
-    </p>
-
-    <h3>Friday (Section B) - 9:30AM–12:30PM</h3>
-    <p>
-      (possible opening for two additional students Spring 2026)<br><br>
-      Feb 5 (an actual THURSDAY date by special arrangement with parents)<br>
-      Feb 20<br>
-      March 6 and 20<br>
-      April 10 and 24<br>
-      May 8 and 22
-    </p>
-
-    <h3>Friday (Section C) - 1:30PM–4:30PM</h3>
-    <p>
-      FULL
-    </p>
-
-    <h3>Thursday (Section D) - 12:30PM–3:30PM</h3>
-    <p>
-      A possible new section to open on February 5<br><br>
-      February 5 and 19<br>
-      March 5 and Tuesday, March 17 (Thursday, March 19 is my anniversary)<br>
-      April 9 and 23<br>
-      May 7 and 21<br><br>
-      6–8 spaces available (8 students = a full class)
-    </p>
-
-    <!-- JS -->
-    <script src="js/header.js"></script>
-    <script src="js/footer.js"></script>
-
-    <!-- FOOTER -->
-    <footer id="footer"></footer>
-
-  </body>
+  <footer id="footer"></footer>
+</body>
 </html>
