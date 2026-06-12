@@ -2,18 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery</title>
+  <title>Gallery - Saint Joseph's Atelier</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<header id="header"></header>
-<body>
-  <h1>Example Text</h1>
-  <p></p>
-  <!-- JS -->
+
+<body class="gallery-page">
+  <header id="header"></header>
+
+  <main id="gallery-content" class="gallery-main">
+    <section id="student-gallery-intro" class="gallery-hero" aria-labelledby="gallery-title">
+      <div id="gallery-intro-copy" class="gallery-hero-copy">
+        <h1 id="gallery-title" class="gallery-title">Student gallery</h1>
+        <p id="gallery-subtitle" class="gallery-subtitle">Subheading</p>
+        <p id="gallery-lede" class="gallery-lede">
+          Body text for your whole article or post. We'll put in some lorem ipsum to show how a
+          filled-out page might look.
+        </p>
+        <p id="gallery-description" class="gallery-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non tellus sed lectus
+          dictum dignissim. Curabitur blandit, sapien at fermentum luctus, eros erat posuere justo,
+          vitae finibus mauris sem sed libero.
+        </p>
+      </div>
+
+      <div id="featured-gallery-artwork" class="gallery-feature-card" aria-label="Featured student artwork placeholder">
+        <span class="gallery-image-icon" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section id="gallery-showcase" class="gallery-showcase" aria-labelledby="gallery-filter-title">
+      <h2 id="gallery-filter-title" class="visually-hidden">Gallery filters</h2>
+
+      <div id="gallery-filters" class="gallery-filter-list" aria-label="Gallery class filters">
+        <button id="filter-all" class="gallery-filter gallery-filter-active" type="button">All classes</button>
+        <button id="filter-drawing" class="gallery-filter" type="button">Drawing</button>
+        <button id="filter-painting" class="gallery-filter" type="button">Painting</button>
+        <button id="filter-mixed-media" class="gallery-filter" type="button">Mixed media</button>
+      </div>
+
+      <div id="student-artwork-grid" class="gallery-grid">
+        <article id="gallery-item-one" class="gallery-card">
+          <div class="gallery-card-image" aria-hidden="true">
+            <span class="gallery-image-icon"></span>
+          </div>
+          <div class="gallery-card-copy">
+            <h3 class="gallery-card-title">Title</h3>
+            <p class="gallery-card-text">
+              Body text for whatever you'd like to say. Add main takeaway points, quotes,
+              anecdotes, or even a very short story.
+            </p>
+          </div>
+        </article>
+
+        <article id="gallery-item-two" class="gallery-card">
+          <div class="gallery-card-image" aria-hidden="true">
+            <span class="gallery-image-icon"></span>
+          </div>
+          <div class="gallery-card-copy">
+            <h3 class="gallery-card-title">Title</h3>
+            <p class="gallery-card-text">
+              Body text for whatever you'd like to say. Add main takeaway points, quotes,
+              anecdotes, or even a very short story.
+            </p>
+          </div>
+        </article>
+
+        <article id="gallery-item-three" class="gallery-card">
+          <div class="gallery-card-image" aria-hidden="true">
+            <span class="gallery-image-icon"></span>
+          </div>
+          <div class="gallery-card-copy">
+            <h3 class="gallery-card-title">Title</h3>
+            <p class="gallery-card-text">
+              Body text for whatever you'd like to say. Add main takeaway points, quotes,
+              anecdotes, or even a very short story.
+            </p>
+          </div>
+        </article>
+
+        <article id="gallery-item-four" class="gallery-card">
+          <div class="gallery-card-image" aria-hidden="true">
+            <span class="gallery-image-icon"></span>
+          </div>
+          <div class="gallery-card-copy">
+            <h3 class="gallery-card-title">Title</h3>
+            <p class="gallery-card-text">
+              Body text for whatever you'd like to say. Add main takeaway points, quotes,
+              anecdotes, or even a very short story.
+            </p>
+          </div>
+        </article>
+
+        <article id="gallery-item-five" class="gallery-card">
+          <div class="gallery-card-image" aria-hidden="true">
+            <span class="gallery-image-icon"></span>
+          </div>
+          <div class="gallery-card-copy">
+            <h3 class="gallery-card-title">Title</h3>
+            <p class="gallery-card-text">
+              Body text for whatever you'd like to say. Add main takeaway points, quotes,
+              anecdotes, or even a very short story.
+            </p>
+          </div>
+        </article>
+
+        <article id="gallery-item-six" class="gallery-card">
+          <div class="gallery-card-image" aria-hidden="true">
+            <span class="gallery-image-icon"></span>
+          </div>
+          <div class="gallery-card-copy">
+            <h3 class="gallery-card-title">Title</h3>
+            <p class="gallery-card-text">
+              Body text for whatever you'd like to say. Add main takeaway points, quotes,
+              anecdotes, or even a very short story.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery-enrollment-callout" class="gallery-cta" aria-labelledby="gallery-cta-title">
+      <h2 id="gallery-cta-title" class="gallery-cta-title">Want to see your work here?</h2>
+      <p id="gallery-cta-text" class="gallery-cta-text">
+        Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or
+        even a very short story.
+      </p>
+      <a id="gallery-cta-link" class="gallery-cta-link" href="contact.html">Enroll in a class</a>
+    </section>
+  </main>
+
   <script src="js/header.js"></script>
   <script src="js/footer.js"></script>
 
-  <!-- FOOTER -->
   <footer id="footer"></footer>
 </body>
 </html>
