@@ -1,0 +1,35 @@
+/* ==========================================================================
+   MASTER THEME VARIABLE DECLARATIONS (css/colors.css)
+   ========================================================================== */
+:root {
+  /* Brand Theme Colors */
+  --primary-blue: #345461;          /* Background color for the global header, footer, and action buttons */
+  --light-blue: #7D9CAE;            /* The main overall background color for the website body backdrop */
+  --accent-cream: #FFD26A;          /* Highlight color used for active text links and focus states */
+  --text-muted: #B6C9CE;            /* Secondary typography color used inside headers and brand text */
+
+  /* Global Element Colors */
+  --card-white: #ffffff;            /* Background color for layout info cards, grid modules, and white boxes */
+  --text-dark: #333333;             /* The default dark gray font color used for section titles and main body copy */
+  --thumb-gray: #e0e0e0;            /* Background color for placeholder images, thumbnails, and preview square borders */
+  --cta-light-gray: #f9f9f9;        /* Soft gray background shade dedicated to the lower call-to-action banner */
+  --btn-text-white: #F5F7F8;        /* Off-white font color used inside primary buttons for clear readability */
+  --black-border: #000000;          /* Deep dark solid black accent border lines (like the footer divider grid) */
+
+  /* Component Border Adjustments */
+  --header-border-dark: #345469;    /* Clean divider stroke color directly beneath the header menu container */
+  --header-border-mobile: #28424d;  /* Darker border separator baseline used under the expanded mobile nav dropdown drawer */
+
+  /* Page-Specific Text Nuances */
+  --text-subheading-gray: #777777;  /* Muted grey color for page sub-captions (like the layout subtitle under section h2s) */
+  --text-lead-black: #111111;       /* Higher emphasis black font color specifically for summary introductory lead paragraphs */
+  --text-paragraph-gray: #555555;   /* Secondary gray text color used inside lists and the 4-column value cards */
+
+  /* Decorative Blueprint Framework Elements */
+  --blueprint-bg: #d9d9d9;          /* Solid flat background canvas wash for the geometric layout schematic box */
+  --blueprint-line: #b5b5b5;        /* Line stroke color rendering the crossed intersecting guidelines inside the hero container */
+
+  --filter-pill-hover: #5d7480;      /* Dark slate blue styling for the active / hover states of category pills */
+  --text-title-left-white: #ffffff;  /* High contrast white text color specifically for layouts set against blue background layers */
+
+}

@@ -3,127 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <title>Classes</title>
+  <!-- Core global stylesheet linked matching index configuration -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<header id="header"></header>
+<body>
 
-<body class="classes-page">
-  <header id="header"></header>
+<!-- MAIN CONTENT SECTION WITH EXCLUSIVE SCOPING CLASS -->
+<main class="main-content classes-page-content">
 
-  <main id="classes-content" class="classes-main">
-    <section id="classes-hero" class="classes-hero">
-      <div class="hero-art" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <h1 class="page-title">The Nitty Gritty</h1>
-        <p class="page-intro">Class sessions, dates, pricing, and what each student can expect.</p>
+  <!-- SECTION 1: INJECTED SPLIT ROW (Image left, text right) -->
+  <section class="classes-split-row">
+    <!-- Sized safely via page-specific layout overrides -->
+    <div class="card-img-placeholder classes-main-hero-image"></div>
+
+    <div class="classes-text-block">
+      <h2>Our classes</h2>
+      <span class="classes-subheading">Subheading</span>
+      <p class="classes-lead">Body text for your whole article or post. We'll put in some lorem ipsum to show how a filled-out page might look.</p>
+      <p>Exceptional efficient emerging, colors various elements carefully curated Drops conversation exquisite perfect minimal rich attributes Content. Qui international first-class rolls-ut. Punctual adipisicing, essential lovely queen tempor eiusmod irure. Exclusive chalets charming Scandinavian impeccable eco luxury quality of life soft power pariatur Melbourne occasional discerning. Go wardrobe silkup, el Porter destination Toto remarkable official Refined exceptionel Blessed bound, Zurich sleepy perfect consecutive.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: DYNAMIC FILTER MENU PILLS -->
+  <div class="classes-filter-bar">
+    <button class="filter-pill active" data-target="all">All classes</button>
+    <button class="filter-pill" data-target="first_class">Canvas Class</button>
+    <button class="filter-pill" data-target="second_class">Mosaics Class</button>
+    <button class="filter-pill" data-target="third_class">Pigments Class </button>
+  </div>
+
+  <!-- SECTION 3: CATALOG INTERACTIVE CONTROLLER CONTAINER -->
+  <section class="catalog-section" id="catalog-view-wrapper">
+
+    <!-- DEFAULT: THE 2x3 LAYOUT CATALOG GRID -->
+    <div class="grid-container classes-three-cols" id="catalog-grid">
+
+      <!-- Class Item Card 1 -->
+      <div class="catalog-card">
+        <div class="card-thumb-placeholder"></div>
+        <div class="catalog-card-text">
+          <h3>Drawing Basics</h3>
+          <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+        </div>
       </div>
-    </section>
 
-    <section id="class-details" class="details-grid" aria-label="Class details">
-      <article id="pricing" class="info-card">
-        <h2 class="section-title">Pricing</h2>
-        <p>
-          Each student: $20 per art session.<br>
-          There are 8 sessions x $20.00 = $160.00 per semester.<br>
-          Each session is 3 hours long. That's $6.67/hour.
-        </p>
-      </article>
-
-      <article id="included" class="info-card">
-        <h2 class="section-title">What's Included</h2>
-        <p>
-          This price includes my planning and instruction, plus all supplies used for formal art projects:
-          tempera paints, watercolor paint, paint brushes, quality drawing paper, watercolor papers, ink,
-          glue, spray fixative, chalk pastels, oil pastels, fabric for ink block printing, rubber blocks for
-          linoleum block printing, clear acetate sheets, and more.
-        </p>
-        <p class="note-card">
-          Prices for art supplies have risen considerably since I taught art for $15.00 per session. The class
-          price has increased to cover the increased cost of supplies.
-        </p>
-      </article>
-
-      <article id="students-bring" class="info-card">
-        <h2 class="section-title">Students Bring</h2>
-        <p>
-          A good pair of scissors<br>
-          and socks or slippers to wear in the atelier.
-        </p>
-        <p class="note-card">
-          I ask that each new student pays for 3 sessions at the outset.
-        </p>
-      </article>
-
-      <article id="class-structure" class="info-card wide-card">
-        <h2 class="section-title">Class Structure</h2>
-        <p>
-          When are the classes?<br>
-          Wednesdays and Fridays, with possible Thursday afternoon sessions.
-        </p>
-        <p class="note-card">
-          We will meet on the first and third Fridays of the month.
-        </p>
-      </article>
-    </section>
-
-    <section id="spring-schedule" class="schedule-section">
-      <h2 class="schedule-title">Spring 2026 Schedule</h2>
-
-      <div class="schedule-grid">
-        <article id="section-a" class="schedule-card">
-          <div class="schedule-art" aria-hidden="true"></div>
-          <h3 class="class-name">Wednesday (Section A)</h3>
-          <p class="class-time">12:00PM-3:00PM</p>
-          <p class="class-note">(possible opening for two additional students Spring 2026)</p>
-          <p class="class-dates">
-            Feb 6 (an actual Friday date by special arrangement with parents)<br>
-            Feb 18<br>
-            March 4 and 18<br>
-            April 8 and 22<br>
-            May 6 and 20
-          </p>
-        </article>
-
-        <article id="section-b" class="schedule-card">
-          <div class="schedule-art" aria-hidden="true"></div>
-          <h3 class="class-name">Friday (Section B)</h3>
-          <p class="class-time">9:30AM-12:30PM</p>
-          <p class="class-note">(possible opening for two additional students Spring 2026)</p>
-          <p class="class-dates">
-            Feb 5 (an actual Thursday date by special arrangement with parents)<br>
-            Feb 20<br>
-            March 6 and 20<br>
-            April 10 and 24<br>
-            May 8 and 22
-          </p>
-        </article>
-
-        <article id="section-c" class="schedule-card">
-          <div class="schedule-art" aria-hidden="true"></div>
-          <h3 class="class-name">Friday (Section C)</h3>
-          <p class="class-time">1:30PM-4:30PM</p>
-          <p class="class-status">Full</p>
-        </article>
-
-        <article id="section-d" class="schedule-card">
-          <div class="schedule-art" aria-hidden="true"></div>
-          <h3 class="class-name">Thursday (Section D)</h3>
-          <p class="class-time">12:30PM-3:30PM</p>
-          <p class="class-note">A possible new section to open on February 5</p>
-          <p class="class-dates">
-            February 5 and 19<br>
-            March 5 and Tuesday, March 17 (Thursday, March 19 is my anniversary)<br>
-            April 9 and 23<br>
-            May 7 and 21
-          </p>
-          <p class="class-note">6-8 spaces available (8 students = a full class)</p>
-        </article>
+      <!-- Class Item Card 2 -->
+      <div class="catalog-card">
+        <div class="card-thumb-placeholder"></div>
+        <div class="catalog-card-text">
+          <h3>Watercolor Workshop</h3>
+          <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <script src="js/header.js"></script>
-  <script src="js/footer.js"></script>
+      <!-- Class Item Card 3 -->
+      <div class="catalog-card">
+        <div class="card-thumb-placeholder"></div>
+        <div class="catalog-card-text">
+          <h3>Clay Sculpting</h3>
+          <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+        </div>
+      </div>
 
-  <footer id="footer"></footer>
+      <!-- Class Item Card 4 -->
+      <div class="catalog-card">
+        <div class="card-thumb-placeholder"></div>
+        <div class="catalog-card-text">
+          <h3>Sketching Studio</h3>
+          <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+        </div>
+      </div>
+
+      <!-- Class Item Card 5 -->
+      <div class="catalog-card">
+        <div class="card-thumb-placeholder"></div>
+        <div class="catalog-card-text">
+          <h3>Oil Pastel Exploration</h3>
+          <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+        </div>
+      </div>
+
+      <!-- Class Item Card 6 -->
+      <div class="catalog-card">
+        <div class="card-thumb-placeholder"></div>
+        <div class="catalog-card-text">
+          <h3>Mixed Media Art</h3>
+          <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INTERACTIVE DYNAMIC ALTERNATE: THE SINGLE DETAILED BLOCK VIEW -->
+    <div class="single-class-detail-block" id="catalog-detail">
+      <div class="detail-hero-placeholder"></div>
+      <div class="detail-content-text">
+        <h3 id="detail-title">Class Category Details</h3>
+        <p id="detail-description">Select a specific category from the filter menu to view individual course options, supply lists, schedule blocks, and upcoming lesson details for this selected subject studio matter.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SECTION 4: WHAT'S INCLUDED (4-COLUMN FLAT ROW) -->
+  <section class="classes-values-section">
+    <h2 class="section-title-left">What's included</h2>
+    <div class="grid-container classes-four-cols">
+
+      <div class="grid-card classes-value-card">
+        <span class="classes-glyph">ⓘ</span>
+        <h3>Title</h3>
+        <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+      </div>
+
+      <div class="grid-card classes-value-card">
+        <span class="classes-glyph">ⓘ</span>
+        <h3>Title</h3>
+        <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+      </div>
+
+      <div class="grid-card classes-value-card">
+        <span class="classes-glyph">ⓘ</span>
+        <h3>Title</h3>
+        <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+      </div>
+
+      <div class="grid-card classes-value-card">
+        <span class="classes-glyph">ⓘ</span>
+        <h3>Title</h3>
+        <p>Body text for whatever you'd like to say. Add main takeaways, points, quotes, anecdotes, or even a very, very short story.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: BLUEPRINT SCHEMATIC CROSS HERO CONTAINER -->
+  <section class="classes-blueprint-hero">
+    <h2>St-Joseph's Atelier</h2>
+    <a href="classes.html" style="text-decoration: none;">
+      <button class="btnClasses blueprint-btn" role="button">Our Classes</button>
+    </a>
+  </section>
+
+</main>
+
+<!-- DYNAMIC COMPONENTS INJECTION SCRIPTS & LOGIC SCRIPT -->
+<script src="js/classes-filter.js"></script>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+
+<footer id="footer"></footer>
 </body>
 </html>
