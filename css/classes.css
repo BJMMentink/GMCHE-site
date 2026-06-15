@@ -1,0 +1,305 @@
+/* ==========================================================================
+   CLASSES PAGE ARCHITECTURE (css/classes.css)
+   ========================================================================== */
+
+.classes-page-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Section 1 Split Intro configuration */
+.classes-split-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+  background-color: var(--card-white);
+}
+
+.card-img-placeholder.classes-main-hero-image {
+  flex: 1;
+  width: 100%;
+  height: 350px;
+  border-radius: 6px;
+}
+
+.classes-text-block {
+  flex: 1.2;
+  text-align: left;
+}
+
+.classes-text-block h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.25rem;
+  font-weight: normal;
+  color: var(--primary-blue);
+  margin: 0 0 4px 0;
+}
+
+.classes-subheading {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--text-subheading-gray);
+  margin-bottom: 20px;
+}
+
+.classes-text-block p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+
+.classes-text-block p.classes-lead {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text-lead-black);
+}
+
+/* Section 2: Filter Button Capsule Menu */
+.classes-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: flex-start;
+}
+
+.filter-pill {
+  background-color: var(--card-white);
+  border: 1px solid var(--header-border-dark); /* Replaced fallback #cccccc tint */
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-dark);
+}
+
+.filter-pill.active, .filter-pill:hover {
+  background-color: var(--filter-pill-hover, #5d7480); /* Added variable configuration hook */
+  color: var(--card-white);
+  border-color: var(--filter-pill-hover, #5d7480);
+}
+
+
+/* Section 3: Catalog Rows (Overriding global grid to use 3 columns) */
+.catalog-section {
+  margin-bottom: 60px;
+}
+
+.grid-container.classes-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.catalog-card {
+  display: flex;
+  background-color: var(--card-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.card-thumb-placeholder {
+  width: 90px;
+  height: 90px;
+  background-color: var(--thumb-gray);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.catalog-card-text {
+  text-align: left;
+}
+
+.catalog-card-text h3 {
+  margin: 0 0 6px 0;
+  color: var(--primary-blue);
+  font-size: 1rem;
+}
+
+.catalog-card-text p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-paragraph-gray);
+}
+
+
+/* Section 3 Alternate: Interactive Single Detail Block Display View */
+.single-class-detail-block {
+  display: none; /* Controlled dynamically via Javascript filter actions */
+  background-color: var(--card-white);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  gap: 30px;
+  align-items: center;
+  text-align: left;
+  animation: pageSwitchFadeEffect 0.3s ease-in-out;
+}
+
+.detail-hero-placeholder {
+  width: 180px;
+  height: 180px;
+  background-color: var(--thumb-gray);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.detail-content-text h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.85rem;
+  color: var(--primary-blue);
+  margin: 0 0 12px 0;
+}
+
+.detail-content-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+
+/* Section 4: What's Included (Overriding global grid to use 4 columns) */
+.classes-values-section {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.section-title-left {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.75rem;
+  color: var(--text-title-left-white, #ffffff); /* Added contrasting layout context option helper variable */
+  margin-bottom: 24px;
+}
+
+.grid-container.classes-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Stripping base grid box design out to keep elements flat against background */
+.classes-value-card {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.classes-value-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: var(--text-title-left-white, #ffffff);
+}
+
+.classes-value-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-title-left-white, #ffffff); /* Contrast text layer coloring over blue main body backdrop */
+}
+
+.classes-glyph {
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+/* Section 5: Blueprint Schematic Hero Canvas Box */
+.classes-blueprint-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--blueprint-bg);
+  border-radius: 8px;
+  background-image:
+    linear-gradient(to top right, transparent calc(50% - 0.75px), var(--blueprint-line) calc(50% - 0.75px), var(--blueprint-line) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
+    linear-gradient(to top left, transparent calc(50% - 0.75px), var(--blueprint-line) calc(50% - 0.75px), var(--blueprint-line) calc(50% + 0.75px), transparent calc(50% + 0.75px));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.classes-blueprint-hero h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.btnClasses.blueprint-btn {
+  transform: none;
+  margin: 20px 0 0 0;
+}
+
+.btnClasses.blueprint-btn:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+/* Dynamic UI Animation Keyframes */
+@keyframes pageSwitchFadeEffect {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Comprehensive Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .grid-container.classes-three-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-container.classes-four-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .classes-split-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card-img-placeholder.classes-side-image {
+    width: 100%;
+    height: 240px;
+  }
+
+  .grid-container.classes-three-cols,
+  .grid-container.classes-four-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-card {
+    align-items: center;
+  }
+
+  .single-class-detail-block {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .detail-hero-placeholder {
+    width: 100%;
+    height: 150px;
+  }
+
+  .classes-blueprint-hero {
+    height: 300px;
+  }
+
+  .classes-blueprint-hero h2 {
+    font-size: 1.85rem;
+  }
+}

@@ -1,81 +1,170 @@
-/*
- * Dedicated Styles: About Page
- * Completely isolated from main index layout structures
- */
+/* ==========================================================================
+   CLASSES PAGE ARCHITECTURE (css/classes.css)
+   ========================================================================== */
 
-/* Layout: Side-by-Side Flex Rows (Sections 1 & 3) */
-.about-wide-card {
+/* Main layout namespace */
+.classes-page-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Structural Row Components */
+.classes-split-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  background-color: #ffffff;
-  padding: 2rem;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+  background-color: var(--card-white);
+  padding: 30px;
   border-radius: 8px;
-  margin-bottom: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Flexible text containment area */
-.about-wide-card .about-card-text {
+.classes-split-row.classes-reverse-row {
+  flex-direction: row-reverse;
+}
+
+.classes-text-block {
+  flex: 1.2;
+}
+
+/* Size override for side-by-side placeholder display layout */
+.card-img-placeholder.classes-side-image {
   flex: 1;
+  width: 100%;
+  height: 350px;
+  border-radius: 6px;
 }
 
-.about-wide-card .about-card-text h3 {
-  margin: 0 0 10px 0;
-  color: #345461;
+/* Typography elements */
+.classes-text-block h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.25rem;
+  font-weight: normal;
+  color: var(--primary-blue);
+  margin: 0 0 4px 0;
 }
 
-/* Square profile/section content image placeholders */
-.about-wide-card .about-img-placeholder {
-  width: 150px;
-  height: 150px;
-  background-color: #e0e0e0;
-  flex-shrink: 0;
-  border-radius: 4px;
+.classes-subheading {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--text-subheading-gray, #777777); /* Safe fallback if not explicitly declared in colors.css */
+  margin-bottom: 20px;
 }
 
-/* Layout: 4-Column Core Value Grid (Section 2) */
-.about-values-section {
+.classes-text-block p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+
+.classes-text-block p.classes-lead {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text-lead-black, #111111);
+}
+
+/* 4-Column Grid Override Rules */
+.classes-values-section {
   margin-bottom: 60px;
 }
 
-.about-grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns explicitly */
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+.grid-container.classes-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
-/* Uniform design matching the core card look */
-.about-grid-card {
-  background-color: #ffffff;
-  padding: 1.5rem;
+.classes-value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.classes-value-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.classes-value-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-paragraph-gray, #555555);
+}
+
+.classes-glyph {
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+/* Blueprint Line Intersection Element Hero box style layout */
+.classes-blueprint-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--blueprint-bg, #d9d9d9);
   border-radius: 8px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* Renders clean technical canvas guidelines natively matching layout mockups */
+  background-image:
+    linear-gradient(to top right, transparent calc(50% - 0.75px), var(--blueprint-line, #b5b5b5) calc(50% - 0.75px), var(--blueprint-line, #b5b5b5) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
+    linear-gradient(to top left, transparent calc(50% - 0.75px), var(--blueprint-line, #b5b5b5) calc(50% - 0.75px), var(--blueprint-line, #b5b5b5) calc(50% + 0.75px), transparent calc(50% + 0.75px));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  overflow: hidden;
 }
 
-.about-grid-card h3 {
-  margin: 0 0 10px 0;
-  color: #345461;
+.classes-blueprint-hero h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--text-dark);
+  margin: 0;
+  z-index: 2;
 }
 
-/* Responsive Breakpoints: Tablet Viewport */
-@media (max-width: 900px) {
-  .about-grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Drops grid down to 2x2 */
+/* Cleans button position alignment inside the blueprint relative workspace context */
+.btnClasses.blueprint-btn {
+  transform: none;
+  margin: 20px 0 0 0;
+}
+
+.btnClasses.blueprint-btn:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* Responsive breakdowns updating the grid contexts safely */
+@media (max-width: 992px) {
+  .grid-container.classes-four-cols {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsive Breakpoints: Mobile Viewport */
-@media (max-width: 600px) {
-  .about-wide-card {
-    flex-direction: column; /* Stacks image and text vertically */
-    text-align: center;
+@media (max-width: 768px) {
+  .classes-split-row,
+  .classes-split-row.classes-reverse-row {
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
   }
 
-  .about-grid-container {
-    grid-template-columns: 1fr; /* Compresses values to single layout column */
+  .card-img-placeholder.classes-side-image {
+    height: 240px;
+  }
+
+  .grid-container.classes-four-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .classes-blueprint-hero {
+    height: 300px;
+  }
+
+  .classes-blueprint-hero h2 {
+    font-size: 1.85rem;
   }
 }
