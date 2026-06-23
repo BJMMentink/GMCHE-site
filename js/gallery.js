@@ -1,103 +1,84 @@
-// js/gallery.js
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const galleryContainer = document.getElementById('gallery-container');
-
-  // Lightbox Elements
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
-  const closeBtn = document.querySelector('.lightbox-close');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
 
-  // CONFIGURATION
-  const imagePath = 'img/';
-  const imagePrefix = 'gallery_';
-  const imageExtension = '.jpg';
+  let galleryData = [];
+  let activeIndex = 0;
 
-  let currentIndex = 1;
-  let captionsData = {};
+  // 1. Load the manifest
+  try {
+    const response = await fetch('gallery.json');
+    const data = await response.json();
 
-  // 1. Fetch the optional captions file
-  fetch('captions.json')
-    .then(response => {
-      if (!response.ok) throw new Error("No captions file found.");
-      return response.json();
-    })
-    .then(data => {
-      captionsData = data;
-    })
-    .catch(err => {
-      console.log("No optional captions file found. Proceeding without captions.");
-    })
-    .finally(() => {
-      loadNextImage();
-    });
+    // --- ADDED: Verify each image actually exists before adding to galleryData ---
+    const verifiedImages = [];
+    for (const item of data.images) {
+      const exists = await new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = `img/gallery/${item.filename}`;
+      });
+      if (exists) verifiedImages.push(item);
+    }
 
-  function loadNextImage() {
-    const imgTest = new Image();
-    const currentSrc = `${imagePath}${imagePrefix}${currentIndex}${imageExtension}`;
+    galleryData = verifiedImages;
+    renderGallery();
+  } catch (err) {
+    console.error("Error loading gallery.json:", err);
+  }
 
-    imgTest.onload = function() {
+  function renderGallery() {
+    galleryData.forEach((item, index) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'gallery-item';
-
-      const imgElement = document.createElement('img');
-      imgElement.src = currentSrc;
-      imgElement.alt = `Student Artwork ${currentIndex}`;
-
-      // Add click event to open the lightbox
-      const currentImgNumber = currentIndex;
-      wrapper.addEventListener('click', () => openLightbox(currentSrc, currentImgNumber));
-
-      wrapper.appendChild(imgElement);
+      wrapper.innerHTML = `<img src="img/gallery/${item.filename}" alt="${item.caption || 'Artwork'}">`;
+      wrapper.addEventListener('click', () => openLightbox(index));
       galleryContainer.appendChild(wrapper);
-
-      currentIndex++;
-      loadNextImage();
-    };
-
-    imgTest.onerror = function() {
-      console.log(`Gallery finished loading. Total images: ${currentIndex - 1}`);
-    };
-
-    imgTest.src = currentSrc;
+    });
   }
 
-  // Lightbox Functions
-  function openLightbox(imageSrc, imageNumber) {
+  function openLightbox(index) {
+    activeIndex = index;
+    const item = galleryData[activeIndex];
+    lightboxImg.src = `img/gallery/${item.filename}`;
+
+    const caption = item.caption;
+    lightboxCaption.textContent = caption || "";
+    lightboxCaption.style.display = caption ? "block" : "none";
+
     lightbox.style.display = "flex";
-    lightboxImg.src = imageSrc;
-
-    // Check if a caption exists for this specific image number
-    const specificCaption = captionsData[`gallery_${imageNumber}`];
-
-    if (specificCaption) {
-      lightboxCaption.textContent = specificCaption;
-      lightboxCaption.style.display = "block"; // Show the transparent box
-    } else {
-      lightboxCaption.textContent = "";
-      lightboxCaption.style.display = "none"; // Hide the box completely
-    }
   }
 
-  function closeLightbox() {
-    lightbox.style.display = "none";
-  }
+  // Navigation Logic
+  const next = () => {
+    activeIndex = (activeIndex + 1) % galleryData.length;
+    openLightbox(activeIndex);
+  };
 
-  // Close when clicking the 'X'
-  closeBtn.addEventListener('click', closeLightbox);
+  const prev = () => {
+    activeIndex = (activeIndex - 1 + galleryData.length) % galleryData.length;
+    openLightbox(activeIndex);
+  };
 
-  // Close when clicking anywhere outside the image
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
+  // Event Listeners
+  nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+  prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display !== "flex") return;
+    if (e.key === "Escape") lightbox.style.display = "none";
+    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") prev();
   });
 
-  // Close when pressing the 'Escape' key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape" && lightbox.style.display === "flex") {
-      closeLightbox();
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+      lightbox.style.display = "none";
     }
   });
 });

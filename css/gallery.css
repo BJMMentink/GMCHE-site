@@ -87,6 +87,38 @@
   max-height: 85vh;
 }
 
+/* Navigation Buttons */
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10001; /* Above everything */
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.lightbox-nav-btn:hover { opacity: 1; }
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Add/Update this to your existing CSS */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000; /* Keeps it above everything */
+}
+
 /* The actual image inside the lightbox */
 .lightbox-content {
   max-width: 100%;
