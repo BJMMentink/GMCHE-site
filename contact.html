@@ -2,97 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact</title>
+  <title>Contact | St. Joseph's Atelier</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
+<body>
+<header id="header"></header>
 
-<body class="contact-page">
-  <header id="header"></header>
+<main class="main-content">
+  <section class="contact-section">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="contact-intro">We look forward to hearing from you. Please reach out with any inquiries regarding our fine art workshops.</p>
 
-  <main id="contact-content" class="contact-main">
-    <section id="contact-hero" class="contact-hero" aria-labelledby="contact-title">
-      <div class="contact-intro">
-        <h1 id="contact-title" class="contact-title">Contact</h1>
-        <p class="contact-lede">
-          You are welcome to reach out with any questions, to check class availability, or to ask about
-          signing up for a session. Whether you are new or returning, I am happy to help you find the
-          right fit.
-        </p>
+    <div class="contact-card">
+      <h3>Contact Information</h3>
+
+      <div class="contact-item">
+        <span class="label">Location:</span>
+        <p>Jackson, Wisconsin</p>
       </div>
-    </section>
 
-    <section id="contact-form-map" class="contact-panel" aria-label="Contact form and location map">
-      <form id="contact-form" class="contact-form" action="#" method="post">
-        <h2 class="panel-label">Contact Form</h2>
-
-        <label class="form-field" for="contact-name">
-          <span class="field-label">Name</span>
-          <input id="contact-name" class="contact-input" name="name" type="text" placeholder="Name Field">
-        </label>
-
-        <label class="form-field" for="contact-email">
-          <span class="field-label">Email</span>
-          <input id="contact-email" class="contact-input" name="email" type="email" placeholder="Email Field">
-        </label>
-
-        <label class="form-field" for="contact-phone">
-          <span class="field-label">Phone</span>
-          <input id="contact-phone" class="contact-input" name="phone" type="tel" placeholder="Phone Field">
-        </label>
-
-        <label class="form-field" for="contact-message">
-          <span class="field-label">Message</span>
-          <textarea id="contact-message" class="contact-input contact-message" name="message" placeholder="Message Field"></textarea>
-        </label>
-
-        <button id="contact-submit" class="contact-button" type="submit">Submit Button</button>
-      </form>
-
-      <aside id="contact-map" class="map-card" aria-label="Map for Jackson, Wisconsin">
-        <iframe
-          class="map-frame"
-          title="Map of Jackson, Wisconsin"
-          src="https://www.google.com/maps?q=Jackson,%20Wisconsin&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </aside>
-    </section>
-
-    <section id="contact-info" class="contact-info-grid" aria-label="Studio contact information">
-      <article id="studio-address" class="contact-card">
-        <h2 class="card-label">Address</h2>
-        <p>Studio address details<br>Jackson, Wisconsin</p>
-      </article>
-
-      <article id="studio-contact" class="contact-card">
-        <h2 class="card-label">Contact</h2>
-        <p>
-          Email: <a href="mailto:dwmagnificat@aol.com">dwmagnificat@aol.com</a><br>
-          Cell: <a href="tel:12623657266">(262) 365-7266</a><br>
-          Home: <a href="tel:12626770305">(262) 677-0305</a>
-        </p>
-      </article>
-
-      <article id="studio-hours" class="contact-card">
-        <h2 class="card-label">Hours</h2>
-        <p>Business hours listing<br>Text or leave a message anytime.</p>
-      </article>
-    </section>
-
-    <section id="social-links" class="social-panel" aria-labelledby="social-title">
-      <h2 id="social-title" class="panel-label">Social Media Links</h2>
-      <div class="social-list">
-        <a id="instagram-link" class="social-link" href="#" aria-label="Instagram">Instagram</a>
-        <a id="facebook-link" class="social-link" href="#" aria-label="Facebook">Facebook</a>
-        <a id="pinterest-link" class="social-link" href="#" aria-label="Pinterest">Pinterest</a>
+      <div class="contact-item">
+        <span class="label">Email:</span>
+        <a href="mailto:dwmagnificat@aol.com">dwmagnificat@aol.com</a>
       </div>
-    </section>
-  </main>
 
-  <script src="js/header.js"></script>
-  <script src="js/footer.js"></script>
+      <div class="contact-item">
+        <span class="label">Phone (Home):</span>
+        <a href="tel:2626770305">(262) 677-0305</a>
+      </div>
 
-  <footer id="footer"></footer>
+      <div class="contact-item">
+        <span class="label">Phone (Cell):</span>
+        <a href="tel:2623657266">(262) 365-7266</a>
+        <small class="note">* Text or leave a message. If I am unavailable, please leave your name and contact info, and I will return your call promptly.</small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer"></footer>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 @import "classes.css"; /* adds classes page stylizing */
 @import "contact.css"; /* adds contact page stylizing */
 @import "gallery.css"; /* adds gallery page stylizing */
+@import "contactOld.css"; /* adds contact page stylizing DEPRECATED */
 
 /* ==========================================================================
    GLOBAL CONFIGURATION & EDGE MARGIN RESET
