@@ -1,0 +1,8 @@
+{
+  "images": [
+    { "filename": "gallery_1.jpg", "caption": "1 artwork" },
+    { "filename": "gallery_2.jpg", "caption": "2 artwork" },
+    { "filename": "gallery_3.jpg", "caption": "3 artwork" },
+    { "filename": "gallery_4.jpg", "caption": "4 artwork" }
+  ]
+}

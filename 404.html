@@ -1,62 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>Page Not Found</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - St. Joseph's Atelier</title>
+  <!-- Core global stylesheet linked matching site configuration -->
+  <link rel="stylesheet" href="css/styles.css">
   <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
+    /* 404 Page Layout Context isolated to prevent cascading errors */
+    .error-page-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      padding: 40px 20px;
     }
 
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
+    .error-container {
+      background-color: var(--card-white);
+      padding: 50px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      max-width: 600px;
       width: 100%;
     }
 
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
+    .error-code {
+      font-family: "Times New Roman", Times, serif;
+      font-size: clamp(4rem, 8vw, 6rem);
+      color: var(--primary-blue);
+      line-height: 1;
+      margin-bottom: 10px;
     }
 
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
+    .error-container h1 {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 2.25rem;
+      font-weight: normal;
+      color: var(--text-dark);
+      margin-bottom: 16px;
     }
 
-    p {
-      margin: 0 auto;
-      width: 280px;
+    .error-container p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-paragraph-gray, #555555);
+      margin-bottom: 32px;
     }
 
-    @media only screen and (max-width: 280px) {
+    /* Resets hero transform properties to look beautiful standing alone */
+    .error-container .btnClasses {
+      transform: none;
+      margin: 0;
+      display: inline-block;
+    }
 
-      body,
-      p {
-        width: 95%;
+    .error-container .btnClasses:hover {
+      transform: scale(1.04);
+    }
+
+    /* Completely hidden element containing the 512+ byte threshold pad requirement */
+    .ie-padding-dump {
+      display: none;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+    @media (max-width: 768px) {
+      .error-container {
+        padding: 35px 20px;
       }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
+      .error-container h1 {
+        font-size: 1.75rem;
       }
-
     }
   </style>
 </head>
-
+<header id="header"></header>
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
-</body>
 
+<!-- MAIN SCROLL CONTENT AREA -->
+<main class="main-content error-page-wrapper">
+
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <h1>Page Not Found</h1>
+    <p>Saint Joseph’s Atelier is a place of mindful exploration, but it looks like the page you are trying to find does not exist or has been moved.</p>
+
+    <a href="index.html" style="text-decoration: none;">
+      <button class="btnClasses" role="button">Back to Home</button>
+    </a>
+  </div>
+
+</main>
+
+<!-- INTERACTIVE DYNAMIC SCRIPT INJECTIONS -->
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+
+<footer id="footer"></footer>
+
+<!--
+  CRITICAL INTERNET EXPLORER FRIENDLY ERROR PAGE OVERRIDE PADDING
+  Ensures length threshold exceeds 512 bytes to display the custom screen
+-->
+<div class="ie-padding-dump" aria-hidden="true">
+  Padding length dump to prevent Internet Explorer from forcing its standard friendly error layout rules over this beautifully customized interface template block. This hidden string content allows the byte signature size threshold requirement criteria parameters to load safely on obsolete legacy browser frame clients.
+</div>
+
+</body>
 </html>
-<!-- IE needs 512+ bytes: https://docs.microsoft.com/archive/blogs/ieinternals/friendly-http-error-pages -->

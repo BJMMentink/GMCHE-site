@@ -1,0 +1,45 @@
+                        ------------------------
+                        Gallery Management Guide
+                        ------------------------
+This guide will help you manage the photos on your website. You only need to work with two locations: the img/gallery/ folder and the gallery.json file.
+
+Important Rules
+  Filenames: The name you type in the gallery.json file must match the actual file name in your img/gallery/ folder exactly (including capital letters and the .jpg or .png ending).
+  ---
+  The Comma Rule: Every entry in the list must end with a comma (,) except for the very last item. If you break this rule, the gallery may stop appearing.
+-------------------------
+Step-by-Step Instructions
+-------------------------
+  1. Adding a New Picture
+    Place your image file into the img/gallery/ folder.
+    ---
+    Open gallery.json in your text editor.
+    ---
+    Find the "images": [ section.
+    ---
+    Paste your new entry (see the template below).
+    ---
+    If you are adding this to the middle of the list, ensure the line has a comma at the end.
+
+  2. Managing Captions
+    To Add/Update: Find the entry for your photo in gallery.json and type your text inside the quotes for "caption".
+    ---
+    To Remove a Caption: Just leave the quotes empty, like this: "caption": ""
+
+  3. Removing a Picture
+    Delete the file: Delete the image from the img/gallery/ folder.
+    ---
+    Delete the entry: Delete the entire line for that image in gallery.json. If you deleted the last item in the list, make sure to remove the comma from the line before it.
+
+
+  4. Copy/Paste Templates
+    When adding a new photo, copy one of these blocks and paste it into your gallery.json file inside the square brackets [ ].
+    ---
+    Template A: Adding a photo WITH a caption
+      { "filename": "your-photo-name.jpg", "caption": "A beautiful description here" },
+    ---
+    Template B: Adding a photo WITHOUT a caption
+      { "filename": "your-photo-name.jpg", "caption": "" },
+
+Pro-Tip for Reordering
+  You can change the order of the photos on the website simply by highlighting a full line in gallery.json (including the comma), cutting it, and pasting it in a different position within the list.

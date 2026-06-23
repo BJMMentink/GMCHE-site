@@ -2,6 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <base href="./">
+  <title>Gallery | St. Joseph's Atelier</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header id="header"></header>
+
+<main class="main-content">
+  <section class="gallery-section">
+    <h2 class="section-title">Student Gallery</h2>
+    <p class="gallery-intro">A collection of creative works from our fine art workshops.</p>
+
+    <div class="gallery-masonry" id="gallery-container"></div>
+
+  </section>
+</main>
+
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+
+  <div class="lightbox-nav-btn prev" id="prev-btn">&#10094;</div>
+  <div class="lightbox-nav-btn next" id="next-btn">&#10095;</div>
+
+  <div class="lightbox-wrapper">
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-caption"></div>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <title>Gallery - Saint Joseph's Atelier</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -136,4 +177,4 @@
 
   <footer id="footer"></footer>
 </body>
-</html>
+</html>-->
