@@ -170,3 +170,36 @@
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+#backToTop {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 30px;
+  left: 50%; /* Moves it to the center horizontally */
+  transform: translateX(-50%); /* Corrects the alignment to be perfectly centered */
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--primary-blue);
+  color: white;
+  cursor: pointer;
+
+  /* Increased size */
+  padding: 15px 40px;
+  width: auto;
+  min-width: 150px;
+
+  border-radius: 30px; /* Pill shape */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#backToTop:hover {
+  background-color: var(--accent-cream);
+  color: var(--primary-blue);
+  transform: translateX(-50%) translateY(-5px); /* Must include translateX to keep it centered */
+}

@@ -102,20 +102,6 @@ body {
   color: var(--primary-blue);
 }
 
-/* Lower Callout Container */
-.lower-cta {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: var(--cta-light-gray);
-  border-radius: 8px;
-  margin-bottom: 40px;
-}
-
-.lower-cta h2 {
-  margin-bottom: 20px;
-  color: var(--text-dark);
-}
-
 /* Responsive Fix for Mobile Screens */
 @media (max-width: 768px) {
   .wide-card {
