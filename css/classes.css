@@ -17,6 +17,10 @@
   background-color: var(--card-white);
 }
 
+.classes-split-row > * {
+  min-width: 0;
+}
+
 .card-img-placeholder.classes-main-hero-image {
   flex: 1;
   width: 100%;
@@ -57,6 +61,7 @@
 /* Section 2: Filter Button Capsule Menu */
 .classes-filter-bar {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 40px;
   justify-content: flex-start;
@@ -111,6 +116,7 @@
 
 .catalog-card-text {
   text-align: left;
+  min-width: 0;
 }
 
 .catalog-card-text h3 {
@@ -153,6 +159,10 @@
   font-size: 1.85rem;
   color: var(--primary-blue);
   margin: 0 0 12px 0;
+}
+
+.detail-content-text {
+  min-width: 0;
 }
 
 .detail-content-text p {
@@ -265,9 +275,11 @@
   .classes-split-row {
     flex-direction: column;
     gap: 24px;
+    padding: 20px;
   }
 
-  .card-img-placeholder.classes-side-image {
+  .card-img-placeholder.classes-side-image,
+  .card-img-placeholder.classes-main-hero-image {
     width: 100%;
     height: 240px;
   }
@@ -298,5 +310,31 @@
 
   .classes-blueprint-hero h2 {
     font-size: 1.85rem;
+    padding-inline: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .classes-page-content {
+    padding-top: 24px;
+  }
+
+  .classes-filter-bar {
+    gap: 8px;
+  }
+
+  .filter-pill {
+    flex: 1 1 calc(50% - 8px);
+    padding-inline: 10px;
+  }
+
+  .catalog-card {
+    flex-direction: column;
+  }
+
+  .card-thumb-placeholder {
+    width: 100%;
+    height: 150px;
   }
 }

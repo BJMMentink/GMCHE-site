@@ -27,6 +27,7 @@
 
 .classes-text-block {
   flex: 1.2;
+  min-width: 0;
 }
 
 /* Size override for side-by-side placeholder display layout */
@@ -166,5 +167,7 @@
 
   .classes-blueprint-hero h2 {
     font-size: 1.85rem;
+    padding-inline: 16px;
+    text-align: center;
   }
 }
