@@ -30,9 +30,6 @@
 }
 
 .classes-text-block h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.25rem;
-  font-weight: normal;
   color: var(--primary-blue);
   margin: 0 0 4px 0;
 }
@@ -194,13 +191,13 @@
 .classes-value-card h3 {
   font-size: 1.15rem;
   margin-bottom: 8px;
-  color: var(--text-title-left-white, #ffffff);
+  color: var(--text-title-left-white, #000000);
 }
 
 .classes-value-card p {
   font-size: 13px;
   line-height: 1.5;
-  color: var(--text-title-left-white, #ffffff); /* Contrast text layer coloring over blue main body backdrop */
+  color: var(--text-title-left-white, #000000); /* Contrast text layer coloring over blue main body backdrop */
 }
 
 .classes-glyph {
