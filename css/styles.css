@@ -3,7 +3,6 @@
 @import "classes.css"; /* adds classes page stylizing */
 @import "contact.css"; /* adds contact page stylizing */
 @import "gallery.css"; /* adds gallery page stylizing */
-@import "contactOld.css"; /* adds contact page stylizing DEPRECATED */
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
 
 /* ==========================================================================
@@ -14,6 +13,19 @@ html, body {
   padding: 0;
   width: 100%;
   box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* Forces all elements to calculate layout boundaries without layout displacement */
@@ -230,23 +242,23 @@ h1, h2, h3 {
 }
 
 /* Contact Section Alignment updated to clean left-alignment inside its grid block */
-.contact-section {
+.footer .contact-section {
   text-align: left;
 }
 
-.contact-section p {
+.footer .contact-section p {
   font-size: 13px;
   margin: 0 0 8px 0;
   line-height: 1.4;
 }
 
-.contact-section a {
+.footer .contact-section a {
   color: var(--accent-cream);
   text-decoration: none;
   transition: color 150ms ease;
 }
 
-.contact-section a:hover {
+.footer .contact-section a:hover {
   color: #ffffff;
 }
 
@@ -290,6 +302,39 @@ h1, h2, h3 {
   gap: 10px; /* Adds space between the logo image and the text */
 }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(182, 201, 206, 0.55);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0;
+}
+
+.menu-toggle::before {
+  content: "\2630";
+  font-size: 26px;
+  line-height: 1;
+}
+
+.menu-toggle[aria-expanded="true"]::before {
+  content: "\00d7";
+  font-size: 32px;
+}
+
+.menu-toggle:focus-visible,
+.nav a:focus-visible,
+.btnClasses:focus-visible {
+  outline: 3px solid var(--accent-cream);
+  outline-offset: 3px;
+}
+
 .main-name {
   font-size: 30px;
   font-weight: bold;
@@ -325,7 +370,7 @@ h1, h2, h3 {
  * Hero Styles
  */
 body, html {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* The hero image */
@@ -334,7 +379,7 @@ body, html {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/main-hero.png");
 
   /* Set a specific height */
-  height: 50%;
+  min-height: clamp(420px, 58vh, 640px);
 
   /* Position and center the image to scale nicely on all screens */
   /* TODO: NEED TO ADJUST WHEN HERO IMG IS CHANGED */
@@ -352,13 +397,33 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  width: min(760px, calc(100% - 40px));
+}
+
+.hero-text h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.08;
+}
+
+.hero-text p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
 }
 
 
 
 /* CSS */
 .btnClasses {
-  transform: translateY(120%);
+  transform: none;
   background-color: var(--primary-blue);
   border-radius: 100px;
   box-shadow: rgba(52, 84, 97, 0.2) 0 -25px 18px -14px inset,
@@ -380,7 +445,7 @@ body, html {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin: 10px 80px;
+  margin: 0;
 
 }
 
@@ -391,7 +456,7 @@ body, html {
   rgba(52, 84, 97, 0.25) 0 4px 8px,
   rgba(52, 84, 97, 0.25) 0 8px 16px,
   rgba(52, 84, 97, 0.25) 0 16px 32px;
-  transform: translateY(120%) scale(1.05) rotate(-1deg);
+  transform: scale(1.05) rotate(-1deg);
 }
 
 /* NEW TABLET MEDIA QUERY FIXED BLOCK: Optimizes spacing on medium width dimensions */
@@ -400,7 +465,7 @@ body, html {
     padding: 16px max(16px, calc((100vw - 1200px) / 2));
   }
   .main-name {
-    font-size: 24px;
+    font-size: 22px;
   }
   .nav a {
     margin-left: 6px;
@@ -430,13 +495,6 @@ body, html {
     align-items: center;
   }
 
-  /* Adds toggle menu click button container visibility layer rules */
-  .header-container::after {
-    content: "☰";
-    font-size: 24px;
-    color: var(--text-muted);
-  }
-
   /* List configuration vertical transform rules when container contains an active toggle class */
   .nav {
     display: none;
@@ -457,4 +515,95 @@ body, html {
     display: flex;
   }
 
+  .header {
+    padding: 14px 18px;
+  }
+
+  .main-name {
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+  }
+
+  .brand-group {
+    min-width: 0;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .nav {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .nav a {
+    display: block;
+    margin: 0;
+    padding: 10px 14px;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 32px 18px;
+  }
+
+  .section-title {
+    margin-bottom: 28px;
+  }
+
+  .footer {
+    padding: 38px 18px 24px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .brand-section {
+    grid-column: auto;
+  }
+
+  .hero-image {
+    min-height: 520px;
+  }
+
+  .hero-text {
+    width: calc(100% - 36px);
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .wide-card {
+    padding: 18px;
+  }
+
+  .card-img-placeholder {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .main-name {
+    font-size: 1.05rem;
+  }
+
+  .main-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions a,
+  .hero-actions .btnClasses {
+    width: 100%;
+  }
 }

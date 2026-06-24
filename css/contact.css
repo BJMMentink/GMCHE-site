@@ -50,6 +50,7 @@
   font-size: 1.1em;
   transition: color 0.2s;
   border-bottom: 2px solid transparent;
+  overflow-wrap: anywhere;
 }
 
 .contact-item a:hover {
@@ -62,4 +63,15 @@
   margin-top: 8px;
   font-style: italic;
   color: var(--text-paragraph-gray);
+}
+
+@media (max-width: 520px) {
+  .contact-section {
+    margin: 32px auto;
+    padding: 0;
+  }
+
+  .contact-card {
+    padding: 26px 20px;
+  }
 }
