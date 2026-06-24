@@ -7,9 +7,10 @@
   --light-blue: #7D9CAE;            /* The main overall background color for the website body backdrop */
   --accent-cream: #e2d2ac;          /* Highlight color used for active text links and focus states */
   --text-muted: #B6C9CE;            /* Secondary typography color used inside headers and brand text */
+  --link-themeGreen: #9bab97;
 
   /* Global Element Colors */
-  --card-white: #ffffff;            /* Background color for layout info cards, grid modules, and white boxes */
+  --card-white: #fceedb;            /* Background color for layout info cards, grid modules, and white boxes */
   --text-dark: #333333;             /* The default dark gray font color used for section titles and main body copy */
   --thumb-gray: #e0e0e0;            /* Background color for placeholder images, thumbnails, and preview square borders */
   --cta-light-gray: #f9f9f9;        /* Soft gray background shade dedicated to the lower call-to-action banner */
