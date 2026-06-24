@@ -86,6 +86,8 @@ h1, h2, h3 {
   background-color: var(--thumb-gray);
   border-radius: 4px;
   flex-shrink: 0;
+  display: block;
+  object-fit: cover;
 }
 
 .card-text h3 {
@@ -118,6 +120,8 @@ h1, h2, h3 {
   background-color: var(--thumb-gray);
   border-radius: 4px;
   margin-bottom: 15px;
+  display: block;
+  object-fit: cover;
 }
 
 .grid-card h3 {

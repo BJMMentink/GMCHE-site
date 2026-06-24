@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     activeIndex = index;
     const item = galleryData[activeIndex];
     lightboxImg.src = `img/gallery/${item.filename}`;
+    lightboxImg.alt = item.caption || "Student artwork";
 
     const caption = item.caption;
     lightboxCaption.textContent = caption || "";
