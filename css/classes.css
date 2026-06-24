@@ -30,9 +30,6 @@
 }
 
 .classes-text-block h2 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2.25rem;
-  font-weight: normal;
   color: var(--primary-blue);
   margin: 0 0 4px 0;
 }
