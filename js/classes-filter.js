@@ -6,16 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Custom descriptions text dictionary for each filtered tab selection
   const categoryData = {
     first_class: {
-      title: "Canvas' Class",
-      desc: "Text for the Canvas class (just ideas for names) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat"
+      title: "Drawing",
+      desc: "Build a strong artistic foundation by learning observation, line, proportion, shading, and composition through guided drawing exercises and creative projects."
     },
     second_class: {
-      title: "Mosaics Class",
-      desc: "Text for the Mosaics class (just ideas for names) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat"
+      title: "Painting",
+      desc: "Explore watercolor, tempera, and acrylic techniques while learning color mixing, brushwork, light, and texture inspired by master artists."
     },
     third_class: {
-      title: "Pigments Class",
-      desc: "Text for the Pigment class (just ideas for names) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat"
+      title: "Printmaking",
+      desc: "Discover the art of creating unique prints through techniques like linoleum block printing, while learning about pattern, design, and composition."
     }
   };
 

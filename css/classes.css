@@ -26,6 +26,7 @@
   width: 100%;
   height: 350px;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .classes-text-block {
@@ -112,6 +113,8 @@
   background-color: var(--thumb-gray);
   border-radius: 4px;
   flex-shrink: 0;
+  display: block;
+  object-fit: cover;
 }
 
 .catalog-card-text {
@@ -152,6 +155,8 @@
   background-color: var(--thumb-gray);
   border-radius: 6px;
   flex-shrink: 0;
+  display: block;
+  object-fit: cover;
 }
 
 .detail-content-text h3 {
@@ -236,6 +241,22 @@
   overflow: hidden;
 }
 
+.blueprint-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.classes-blueprint-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 238, 219, 0.72);
+  z-index: 1;
+}
+
 .classes-blueprint-hero h2 {
   font-family: "Times New Roman", Times, serif;
   font-size: 2.5rem;
@@ -247,6 +268,8 @@
 .btnClasses.blueprint-btn {
   transform: none;
   margin: 20px 0 0 0;
+  position: relative;
+  z-index: 2;
 }
 
 .btnClasses.blueprint-btn:hover {
