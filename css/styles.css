@@ -1,6 +1,7 @@
 @import "colors.css";
 @import "about.css";   /* adds about page stylizing */
 @import "classes.css"; /* adds classes page stylizing */
+@import "calendar.css"; /* adds calendar page stylizing */
 @import "contact.css"; /* adds contact page stylizing */
 @import "gallery.css"; /* adds gallery page stylizing */
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');

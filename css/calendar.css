@@ -1,0 +1,51 @@
+/* ==========================================================================
+   CALENDAR PAGE STYLES (css/calendar.css)
+   ========================================================================== */
+
+.calendar-section {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.calendar-intro {
+  color: var(--text-paragraph-gray);
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.calendar-panel {
+  background: var(--card-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  border-top: 5px solid var(--primary-blue);
+  min-height: 320px;
+}
+
+.calendar-panel h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.calendar-placeholder {
+  color: var(--text-paragraph-gray);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .calendar-section {
+    margin-bottom: 40px;
+  }
+
+  .calendar-panel {
+    padding: 26px 20px;
+    min-height: 240px;
+  }
+}
