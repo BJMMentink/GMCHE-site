@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
       desc: "A workshop for very young children to explore line, shape, and color. Students are introduced to art history and projects that meet their developmental needs, with instructor-led lessons and plenty of room for exploration. Sessions meet once a month (about 2 hours 15 minutes). Two sections are offered so more families can participate. See the Calendar for section dates and tuition."
     },
     barn_owls: {
-      title: "Silent Flight Barn Owls — Skill Refinement for Teens",
-      desc: "Quiet your mind. Focus your art. Leave the noise outside. For teens who want to sharpen skills beyond Art Foundations—typically ages 14–18—meeting once monthly. Projects are more complex, with art history, elements of art, and principles of design. Students have more liberty for artistic choice and often work independently rather than step-by-step. Media may include graphite, charcoal, chalk pastel, colored pencil, watercolor, gouache, scratchboard, acrylic on canvas, and printmaking. A master-artist study is available for teens who wish. See the Calendar for meeting times and tuition."
+      title: "Silent Flight Barn Owls - Skill Refinement for Teens",
+      desc: "Quiet your mind. Focus your art. Leave the noise outside. For teens who want to sharpen skills beyond Art Foundations, typically ages 14–18—meeting once monthly. Projects are more complex, with art history, elements of art, and principles of design. Students have more liberty for artistic choice and often work independently rather than step-by-step. Media may include graphite, charcoal, chalk pastel, colored pencil, watercolor, gouache, scratchboard, acrylic on canvas, and printmaking. A master-artist study is available for teens who wish. See the Calendar for meeting times and tuition."
     },
     sacred_art: {
       title: "St. Joseph’s Sacred Art Atelier and Scriptorium",
@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     art_cafe: {
       title: "Art Café Days (Ages 7–18)",
-      desc: "Focused on art process and experimentation. Each Art Café Day serves a different menu of media—themes may include collage and paper building, design and printing, ceramic enterprise, or paint with a purpose. After brief instruction, students choose their own subject matter, style, and composition, with inspirational prompts and coaching as needed. The Atelier is open for a flexible art-camp-style day. See the Calendar for scheduled Café dates."
+      desc: "Focused on art process and experimentation. Each Art Café Day serves a different menu of media, themes may include collage and paper building, design and printing, ceramic enterprise, or paint with a purpose. After brief instruction, students choose their own subject matter, style, and composition, with inspirational prompts and coaching as needed. The Atelier is open for a flexible art-camp-style day. See the Calendar for scheduled Café dates."
     },
     lamp_lighters: {
-      title: "Mary’s Lamp-Lighters — Moms & Young Adult Women",
-      desc: "A time to work from a prayerful place of peace and rest. Join a community of Catholic women who desire support and encouragement in nurturing their creative side—making art that helps calm the system, develop skills, or explore different media, all for the purpose of creating even more beauty in the world. See the Calendar or Contact page for current evening session details."
+      title: "Mary’s Lamp-Lighters - Moms & Young Adult Women",
+      desc: "A time to work from a prayerful place of peace and rest. Join a community of Catholic women who desire support and encouragement in nurturing their creative side, making art that helps calm the system, develop skills, or explore different media, all for the purpose of creating even more beauty in the world. See the Calendar or Contact page for current evening session details."
     }
   };
 
