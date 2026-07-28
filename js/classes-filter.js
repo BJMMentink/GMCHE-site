@@ -4,6 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const catalogDetail = document.getElementById("catalog-detail");
 
   // Custom descriptions text dictionary for each filtered program selection
+  // To change a class image, update the file path below to point to your new image in img/samples/
+  const categoryImages = {
+    foundations: "img/samples/art-8.JPG",
+    little_lambs: "img/samples/art-9.JPG",
+    barn_owls: "img/samples/art-10.JPG",
+    sacred_art: "img/samples/art-11.jpeg",
+    art_cafe: "img/samples/art-12.jpeg",
+    lamp_lighters: "img/samples/art-13.jpeg"
+  };
+
   const categoryData = {
     foundations: {
       title: "Art Foundations and Skill Building (Primary)",
@@ -52,6 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (categoryData[targetValue]) {
           document.getElementById("detail-title").textContent = categoryData[targetValue].title;
           document.getElementById("detail-description").textContent = categoryData[targetValue].desc;
+        }
+
+        // Update detail hero image to match the selected category
+        if (categoryImages[targetValue]) {
+          catalogDetail.querySelector(".detail-hero-placeholder").src = categoryImages[targetValue];
         }
 
         catalogDetail.style.display = "flex";
