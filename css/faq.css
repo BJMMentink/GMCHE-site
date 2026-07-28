@@ -1,0 +1,201 @@
+/* ==========================================================================
+   FAQ PAGE STYLING (css/faq.css)
+   ========================================================================== */
+
+/* Guidelines Section Spacing */
+.faq-guidelines-section {
+  margin-bottom: 28px;
+}
+
+/* Guidelines Card Styling */
+.faq-guidelines-card {
+  background: var(--card-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 28px 32px;
+}
+
+.faq-guidelines-card h3 {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.45rem;
+  color: var(--text-dark);
+  margin: 0 0 16px 0;
+}
+
+.faq-guidelines-sub {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.85rem;
+  color: var(--text-subheading-gray);
+}
+
+.faq-guidelines-card ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style-type: disc;
+}
+
+.faq-guidelines-card ul li {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-paragraph-gray);
+  margin-bottom: 10px;
+}
+
+.faq-guidelines-card ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Q&A Section Header */
+.faq-qa-section {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.faq-qa-section .section-title {
+  margin-bottom: 32px;
+}
+
+/* FAQ Card / Collapsible Details Element */
+.faq-card {
+  background: var(--card-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: box-shadow 200ms ease;
+}
+
+.faq-card:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+}
+
+.faq-card[open] {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Question Summary Styling */
+.faq-question {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--primary-blue);
+  padding: 20px 28px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  user-select: none;
+  transition: background-color 180ms ease;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::marker {
+  display: none;
+  content: "";
+}
+
+/* Custom arrow indicator */
+.faq-question::after {
+  content: "\25BC";
+  font-size: 0.7rem;
+  color: var(--primary-blue);
+  flex-shrink: 0;
+  transition: transform 200ms ease;
+}
+
+.faq-card[open] .faq-question::after {
+  transform: rotate(180deg);
+}
+
+.faq-question:hover {
+  background-color: rgba(52, 84, 97, 0.04);
+}
+
+/* Answer Content Styling */
+.faq-answer {
+  padding: 0 28px 24px 28px;
+  border-top: 1px solid rgba(52, 84, 97, 0.1);
+}
+
+.faq-answer p {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-paragraph-gray);
+  margin: 16px 0 0 0;
+}
+
+.faq-answer p:first-child {
+  margin-top: 16px;
+}
+
+.faq-answer ul {
+  margin: 12px 0 0 0;
+  padding: 0 0 0 20px;
+  list-style-type: disc;
+}
+
+.faq-answer ul li {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-paragraph-gray);
+  margin-bottom: 8px;
+}
+
+.faq-answer ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .faq-guidelines-card {
+    padding: 22px 20px;
+  }
+
+  .faq-guidelines-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .faq-question {
+    font-size: 1.05rem;
+    padding: 16px 20px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-guidelines-card {
+    padding: 18px 16px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 14px 16px;
+  }
+
+  .faq-answer {
+    padding: 0 16px 18px 16px;
+  }
+
+  .faq-answer p,
+  .faq-answer ul li {
+    font-size: 13px;
+  }
+}
