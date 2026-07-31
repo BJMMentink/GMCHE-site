@@ -1,0 +1,224 @@
+/* ==========================================================================
+   REGISTRATION PAGE ARCHITECTURE (css/registration.css)
+   ========================================================================== */
+
+.reg-title-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reg-title-section h2 {
+  color: var(--primary-blue);
+  margin: 0;
+}
+
+.reg-form {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+/* Fieldset & Legend */
+.reg-fieldset {
+  background: var(--card-white);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 28px 30px;
+  margin-bottom: 28px;
+}
+
+.reg-fieldset legend {
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+  padding: 0 8px;
+}
+
+/* Field Layout */
+.reg-field {
+  margin-bottom: 18px;
+}
+
+.reg-field:last-child {
+  margin-bottom: 0;
+}
+
+.reg-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.reg-required {
+  color: #c0392b;
+}
+
+.reg-field input[type="text"],
+.reg-field input[type="email"],
+.reg-field input[type="tel"],
+.reg-field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: var(--text-dark);
+  background: #ffffff;
+  border: 1px solid var(--header-border-dark);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reg-field input[type="text"]:focus,
+.reg-field input[type="email"]:focus,
+.reg-field input[type="tel"]:focus,
+.reg-field textarea:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(52, 84, 97, 0.15);
+}
+
+.reg-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Multi-Column Rows */
+.reg-field-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.reg-field-row .reg-field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.reg-three-col .reg-field {
+  flex: 1;
+}
+
+.reg-two-col .reg-field {
+  flex: 1;
+}
+
+/* Student Rows */
+.reg-student-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.reg-student-row:last-child {
+  margin-bottom: 0;
+}
+
+.reg-student-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-dark);
+  padding-bottom: 10px;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.reg-student-row .reg-field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Checkbox Group */
+.reg-checkbox-group-label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.reg-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reg-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.reg-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-blue);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.reg-agree-label {
+  margin-top: 8px;
+}
+
+/* Agreement Text */
+.reg-agreement-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-paragraph-gray);
+  margin: 0 0 8px 0;
+}
+
+/* Submit Button */
+.reg-submit-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.reg-submit-btn {
+  font-size: 18px;
+  padding: 12px 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reg-fieldset {
+    padding: 22px 20px;
+  }
+
+  .reg-field-row,
+  .reg-student-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .reg-student-label {
+    padding-bottom: 6px;
+  }
+
+  .reg-student-row .reg-field {
+    margin-bottom: 18px;
+  }
+
+  .reg-student-row:last-child .reg-field {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .reg-title-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .reg-fieldset legend {
+    font-size: 1.15rem;
+  }
+}
