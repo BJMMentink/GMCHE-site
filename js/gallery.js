@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     galleryData.forEach((item, index) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'gallery-item';
-      wrapper.innerHTML = `<img src="img/gallery/${item.filename}" alt="${item.caption || 'Artwork'}">`;
+      wrapper.innerHTML = `<img src="img/gallery/${item.filename}" alt="${item.caption || 'Artwork'}" loading="lazy" decoding="async">`;
       wrapper.addEventListener('click', () => openLightbox(index));
       galleryContainer.appendChild(wrapper);
     });
