@@ -25,8 +25,12 @@
   flex: 1;
   width: 100%;
   height: 350px;
-  border-radius: 6px;
+  aspect-ratio: 10 / 7;
+  border-radius: 8px;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .classes-text-block {
@@ -110,11 +114,14 @@
 .card-thumb-placeholder {
   width: 90px;
   height: 90px;
+  aspect-ratio: 1 / 1;
   background-color: var(--thumb-gray);
-  border-radius: 4px;
+  border-radius: 6px;
   flex-shrink: 0;
   display: block;
   object-fit: cover;
+  object-position: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .catalog-card-text {
@@ -152,11 +159,14 @@
 .detail-hero-placeholder {
   width: 180px;
   height: 180px;
+  aspect-ratio: 1 / 1;
   background-color: var(--thumb-gray);
-  border-radius: 6px;
+  border-radius: 8px;
   flex-shrink: 0;
   display: block;
   object-fit: cover;
+  object-position: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .detail-content-text h3 {
@@ -228,8 +238,9 @@
   position: relative;
   width: 100%;
   height: 400px;
+  aspect-ratio: 16 / 5.3;
   background-color: var(--blueprint-bg);
-  border-radius: 8px;
+  border-radius: 12px;
   background-image:
     linear-gradient(to top right, transparent calc(50% - 0.75px), var(--blueprint-line) calc(50% - 0.75px), var(--blueprint-line) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
     linear-gradient(to top left, transparent calc(50% - 0.75px), var(--blueprint-line) calc(50% - 0.75px), var(--blueprint-line) calc(50% + 0.75px), transparent calc(50% + 0.75px));
@@ -239,6 +250,7 @@
   align-items: center;
   margin-bottom: 40px;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .blueprint-hero-image {
@@ -247,6 +259,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .classes-blueprint-hero::after {

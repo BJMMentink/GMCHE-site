@@ -9,6 +9,10 @@
   padding: 0 20px;
 }
 
+.contact-section-wide {
+  max-width: 800px;
+}
+
 .contact-intro {
   color: var(--text-paragraph-gray);
   margin-bottom: 40px;
@@ -63,6 +67,23 @@
   margin-top: 8px;
   font-style: italic;
   color: var(--text-paragraph-gray);
+}
+
+.blueprint-hero-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.classes-blueprint-hero {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 520px) {

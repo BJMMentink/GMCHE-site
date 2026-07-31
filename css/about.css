@@ -35,8 +35,12 @@
   flex: 1;
   width: 100%;
   height: 350px;
-  border-radius: 6px;
+  aspect-ratio: 10 / 7;
+  border-radius: 8px;
   object-fit: cover;
+  object-position: center;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Typography elements */
@@ -106,8 +110,9 @@
   position: relative;
   width: 100%;
   height: 400px;
+  aspect-ratio: 16 / 5.3;
   background-color: var(--blueprint-bg, #d9d9d9);
-  border-radius: 8px;
+  border-radius: 12px;
   /* Renders clean technical canvas guidelines natively matching layout mockups */
   background-image:
     linear-gradient(to top right, transparent calc(50% - 0.75px), var(--blueprint-line, #b5b5b5) calc(50% - 0.75px), var(--blueprint-line, #b5b5b5) calc(50% + 0.75px), transparent calc(50% + 0.75px)),
@@ -118,6 +123,17 @@
   align-items: center;
   margin-bottom: 40px;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.blueprint-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .classes-blueprint-hero h2 {
@@ -127,16 +143,27 @@
   color: var(--text-dark);
   margin: 0;
   z-index: 2;
+  position: relative;
 }
 
 /* Cleans button position alignment inside the blueprint relative workspace context */
 .btnClasses.blueprint-btn {
   transform: none;
   margin: 20px 0 0 0;
+  position: relative;
+  z-index: 2;
 }
 
 .btnClasses.blueprint-btn:hover {
   transform: scale(1.05) rotate(-1deg);
+}
+
+.classes-blueprint-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 238, 219, 0.72);
+  z-index: 1;
 }
 
 /* Responsive breakdowns updating the grid contexts safely */
