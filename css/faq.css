@@ -170,6 +170,10 @@ display: block;
 box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
+.classes-split-row.classes-reverse-row .card-img-placeholder.classes-side-image {
+object-position: center 75%;
+}
+
 .blueprint-hero-image {
 position: absolute;
 inset: 0;
