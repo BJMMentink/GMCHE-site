@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const catalogDetail = document.getElementById("catalog-detail");
 
   // Custom descriptions text dictionary for each filtered program selection
-  // To change a class image, update the file path below to point to your new image in img/samples/
+  // To change a class image, update the file path below to point to your new image in img/classes/
   const categoryImages = {
-    foundations: "img/samples/art-8.JPG",
-    little_lambs: "img/samples/art-9.JPG",
-    barn_owls: "img/samples/art-10.JPG",
-    sacred_art: "img/samples/art-11.jpeg",
-    art_cafe: "img/samples/art-12.jpeg",
-    lamp_lighters: "img/samples/art-13.jpeg"
+    foundations: "img/classes/classes_2.jpg",
+    little_lambs: "img/classes/classes_3.jpg",
+    barn_owls: "img/classes/classes_4.jpeg",
+    sacred_art: "img/classes/classes_5.jpg",
+    art_cafe: "img/classes/classes_6.jpg",
+    lamp_lighters: "img/classes/classes_7.png"
   };
 
   const categoryData = {
