@@ -204,6 +204,26 @@
 
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
+<button id="backToTop" title="Go to top">↑</button>
 <div id="footer"></div>
+
+<script>
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.onscroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 </body>
 </html>
