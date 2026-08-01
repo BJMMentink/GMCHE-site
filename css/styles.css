@@ -395,7 +395,7 @@ body, html {
   min-height: clamp(420px, 58vh, 640px);
 
   /* Position and center the image to scale nicely on all screens */
-  background-position: 50% 50%;
+  background-position: 50% 25%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
