@@ -263,6 +263,11 @@
   display: block;
 }
 
+.classes-page-content .blueprint-hero-image {
+  object-fit: cover;
+  object-position: center 5%;
+}
+
 .classes-blueprint-hero::after {
   content: "";
   position: absolute;
