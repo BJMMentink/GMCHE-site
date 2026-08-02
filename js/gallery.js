@@ -48,9 +48,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     lightboxImg.src = `img/gallery/${item.filename}`;
     lightboxImg.alt = item.caption || "Student artwork";
 
-    const number = (item.filename.match(/\d+/) || [activeIndex + 1])[0];
-    lightboxCaption.textContent = number;
-    lightboxCaption.style.display = "block";
+    lightboxCaption.textContent = "";
+    lightboxCaption.style.display = "none";
 
     lightbox.style.display = "flex";
   }

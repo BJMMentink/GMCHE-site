@@ -136,6 +136,11 @@
   display: block;
 }
 
+/* Shifts the About page CTA photo up 5% of the banner height (CSS only, no cropping) */
+.classes-blueprint-hero.about-blueprint-hero .blueprint-hero-image {
+  object-position: center 51.7%;
+}
+
 .classes-blueprint-hero h2 {
   font-family: "Times New Roman", Times, serif;
   font-size: 2.5rem;
