@@ -14,19 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const response = await fetch('gallery.json');
     const data = await response.json();
 
-    // --- ADDED: Verify each image actually exists before adding to galleryData ---
-    const verifiedImages = [];
-    for (const item of data.images) {
-      const exists = await new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = `img/gallery/${item.filename}`;
-      });
-      if (exists) verifiedImages.push(item);
-    }
-
-    galleryData = verifiedImages;
+    galleryData = data.images;
     renderGallery();
   } catch (err) {
     console.error("Error loading gallery.json:", err);
@@ -36,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     galleryData.forEach((item, index) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'gallery-item';
-      wrapper.innerHTML = `<img src="img/gallery/${item.filename}" alt="${item.caption || 'Artwork'}" loading="lazy" decoding="async">`;
+      wrapper.innerHTML = `<img src="img/gallery/thumbs/${item.filename}" alt="${item.caption || 'Artwork'}" loading="lazy" decoding="async">`;
       wrapper.addEventListener('click', () => openLightbox(index));
       galleryContainer.appendChild(wrapper);
     });
@@ -47,10 +35,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const item = galleryData[activeIndex];
     lightboxImg.src = `img/gallery/${item.filename}`;
     lightboxImg.alt = item.caption || "Student artwork";
-
-    const number = (item.filename.match(/\d+/) || [activeIndex + 1])[0];
-    lightboxCaption.textContent = number;
-    lightboxCaption.style.display = "block";
+    lightboxCaption.textContent = "";
+    lightboxCaption.style.display = "none";
 
     lightbox.style.display = "flex";
   }
