@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     galleryData.forEach((item, index) => {
       const wrapper = document.createElement('div');
       wrapper.className = 'gallery-item';
-      wrapper.innerHTML = `<img src="img/gallery/${item.filename}" alt="${item.caption || 'Artwork'}">`;
+      wrapper.innerHTML = `<img src="img/gallery/${item.filename}" alt="${item.caption || 'Artwork'}" loading="lazy" decoding="async">`;
       wrapper.addEventListener('click', () => openLightbox(index));
       galleryContainer.appendChild(wrapper);
     });
@@ -48,9 +48,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     lightboxImg.src = `img/gallery/${item.filename}`;
     lightboxImg.alt = item.caption || "Student artwork";
 
-    const caption = item.caption;
-    lightboxCaption.textContent = caption || "";
-    lightboxCaption.style.display = caption ? "block" : "none";
+    const number = (item.filename.match(/\d+/) || [activeIndex + 1])[0];
+    lightboxCaption.textContent = number;
+    lightboxCaption.style.display = "block";
 
     lightbox.style.display = "flex";
   }

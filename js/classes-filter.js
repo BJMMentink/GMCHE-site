@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const catalogDetail = document.getElementById("catalog-detail");
 
   // Custom descriptions text dictionary for each filtered program selection
-  // To change a class image, update the file path below to point to your new image in img/samples/
+  // To change a class image, update the file path below to point to your new image in img/classes/
   const categoryImages = {
-    foundations: "img/samples/art-8.JPG",
-    little_lambs: "img/samples/art-9.JPG",
-    barn_owls: "img/samples/art-10.JPG",
-    sacred_art: "img/samples/art-11.jpeg",
-    art_cafe: "img/samples/art-12.jpeg",
-    lamp_lighters: "img/samples/art-13.jpeg"
+    foundations: "img/classes/classes_2.jpg",
+    little_lambs: "img/classes/classes_3.jpg",
+    barn_owls: "img/classes/classes_4.jpeg",
+    sacred_art: "img/classes/classes_5.jpg",
+    art_cafe: "img/classes/classes_6.jpg",
+    lamp_lighters: "img/classes/classes_7.png"
   };
 
   const categoryData = {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     sacred_art: {
       title: "St. Joseph’s Sacred Art Atelier and Scriptorium",
-      desc: "“The beauty of the faith is a call to live out the faith more freely and fully so that we ourselves can become a beautiful icon for God’s glory in the world.” Dr Jared Stauth, Institute of Catholic Culture. This Saint Joseph’s Atelier will be an exploration of the Catholic faith through beauty of art found in churches, sacred books and items used for Catholic liturgy so that we can continue to rebuild Christendom in our own work and lives. Would you like to paint an icon and create an embossed metal frame for it? Would you be interested in learning calligraphy and Illuminating a favorite scripture passage? Would you like to carve or sculpt a model of your favorite saint? Are you interested in wood-burning an image from the stations of the cross or making a tissue-paper model of a stained glass window? How would you like to carve a linocut block and transfer a print of your block to a ceramic clay slab? Then join me for an exploration of All things Sacred Art in this special Atelier! Journey with me on the third Thursday of the month from 9:00-12:30PM. Due to the focused nature of this class, I would like any proposed student ages 8-18 to fill out and submit an interest form before being admitted. (See Registration tab) Tuition: 30.00 per student per class due to premium art supplies required for some projects."
+      desc: "“The beauty of the faith is a call to live out the faith more freely and fully so that we ourselves can become a beautiful icon for God’s glory in the world.” Dr Jared Stauth, Institute of Catholic Culture. This Saint Joseph’s Atelier will be an exploration of the Catholic faith through beauty of art found in churches, sacred books and items used for Catholic liturgy so that we can continue to rebuild Christendom in our own work and lives. Would you like to paint an icon and create an embossed metal frame for it? Would you be interested in learning calligraphy and Illuminating a favorite scripture passage? Would you like to carve or sculpt a model of your favorite saint? Are you interested in wood-burning an image from the stations of the cross or making a tissue-paper model of a stained glass window? How would you like to carve a linocut block and transfer a print of your block to a ceramic clay slab? Then join me for an exploration of All things Sacred Art in this special Atelier! Journey with me on the third Thursday of the month from 9:00-12:30PM. Due to the focused nature of this class, I would like any proposed student ages 8-18 to fill out and submit an interest form before being admitted. (See Contact page) Tuition: 30.00 per student per class due to premium art supplies required for some projects."
     },
     art_cafe: {
       title: "Art Café Days (Ages 7–18)",

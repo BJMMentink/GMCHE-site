@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar | St. Joseph's Atelier</title>
+  <meta name="description" content="Fall 2026-2027 schedule, session dates, tuition, and policies for St. Joseph's Atelier in Jackson, WI.">
+  <link rel="icon" href="favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calendar | St. Joseph's Atelier">
+  <meta property="og:description" content="Fall 2026-2027 schedule, session dates, tuition, and policies for St. Joseph's Atelier in Jackson, WI.">
+  <meta property="og:image" content="img/calendar/calendar_1.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
   <!-- Core global stylesheet linked matching index configuration -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/calendar-popup.css">
 </head>
 <body>
 <div id="header"></div>
@@ -20,6 +28,7 @@
       <span class="classes-subheading">Fall 2026–2027 · Saint Joseph's Atelier</span>
       <p class="classes-lead">Session dates, tuition, and studio policies for the current semester.</p>
       <p>Art Foundations sessions are now 3½ hours, allowing solid work time after instruction, a mid-session snack/recess, stretch breaks, and cleanup. Classes are limited to 7 students. For availability or registration questions, please <a href="contact.html">contact Donna</a>.</p>
+      <button type="button" class="btnClasses" id="open-calendar-popup">View class calendar</button>
     </div>
     <img class="card-img-placeholder classes-side-image" 
          src="img/calendar/calendar_1.jpeg" 
@@ -102,7 +111,11 @@
         <div class="calendar-group">
           <h4>Art Café Days (Ages 7–18)</h4>
           <p>Open studio style · 9:30 AM – 2:30 PM · seats limited to 10; sign up two weeks in advance · $30.00–$45.00 per person depending on media</p>
-          <p>ART CAFE DAYS: Tuesday September 29th; Friday, October 9th; Wednesday November 11th; Monday, December 7th</p>
+          <p>ART CAFE DAYS:</p>
+          <p>September 29th (Tuesday)<br>
+          October 9th (Friday)<br>
+          November 11th (Wednesday)<br>
+          December 7th (Monday)</p>
         </div>
 
         <div class="calendar-group">
@@ -123,8 +136,8 @@
   <!-- SECTION 3: THE BLUEPRINT SCHEMATIC CROSS CONTAINER -->
   <section class="classes-blueprint-hero">
     <img class="blueprint-hero-image" 
-         src="img/samples/cta-2.jpeg" 
-         alt="Student painting a soft blue artwork at a studio table"
+         src="img/samples/cta-calendar.jpeg" 
+         alt="Students working on art projects at the Atelier"
          width="1200"
          height="400"
          loading="lazy"
@@ -138,6 +151,27 @@
 <!-- DYNAMIC COMPONENTS INJECTION SCRIPTS -->
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/calendar-popup.js"></script>
+
+<!-- SEMESTER CLASS CALENDAR POPUP MODAL -->
+<div class="calendar-popup-overlay" id="calendar-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="calendar-popup-title" hidden>
+  <div class="calendar-popup-card">
+    <div class="calendar-popup-header">
+      <h2 id="calendar-popup-title">Class calendar - Fall 2026-2027</h2>
+      <button type="button" class="calendar-popup-close" id="calendar-popup-close" aria-label="Close calendar">×</button>
+    </div>
+    <div class="calendar-popup-nav">
+      <button type="button" class="calendar-popup-nav-btn" id="calendar-popup-prev" aria-label="Previous month">‹</button>
+      <span class="calendar-popup-month" id="calendar-popup-month"></span>
+      <button type="button" class="calendar-popup-nav-btn" id="calendar-popup-next" aria-label="Next month">›</button>
+    </div>
+    <div class="calendar-popup-grid-wrap">
+      <div class="calendar-popup-grid" id="calendar-popup-grid"></div>
+    </div>
+    <div class="calendar-popup-legend" id="calendar-popup-legend"></div>
+    <p class="calendar-popup-note">Mary's Lamp-Lighters meet evenings, dates vary. Contact Donna for the current schedule.</p>
+  </div>
+</div>
 
 <div id="footer"></div>
 </body>
