@@ -101,6 +101,10 @@ h1, h2, h3 {
   color: var(--primary-blue);
 }
 
+.prayer-credit {
+  font-size: 0.8em;
+}
+
 /* 3-Column Grid Layout for index */
 .classes-section {
   margin-bottom: 60px;
