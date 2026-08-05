@@ -49,15 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
     "2026-11-20": ["foundations_c"],
     "2026-11-30": ["foundations_a"],
     "2026-12-01": ["little_lambs_a"],
+    "2026-12-02": ["foundations_b"],
     "2026-12-03": ["barn_owls"],
     "2026-12-04": ["foundations_c"],
-    "2026-12-07": ["foundations_a", "art_cafe"],
-    "2026-12-09": ["foundations_b"],
+    "2026-12-07": ["art_cafe"],
+    "2026-12-14": ["foundations_a"],
     "2026-12-15": ["little_lambs_b"],
+    "2026-12-16": ["foundations_b"],
     "2026-12-17": ["sacred_art"],
     "2026-12-18": ["foundations_c"],
-    "2026-12-21": ["foundations_a"],
-    "2026-12-23": ["foundations_b"]
+    "2026-12-21": ["foundations_a"]
   };
 
   const semester = [
