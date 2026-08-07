@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const programs = {
     foundations_a: { name: "Foundations A", time: "11:30 AM-3:00 PM" },
-    foundations_b: { name: "Foundations B", time: "11:30 AM-3:00 PM" },
+    foundations_b: { name: "Foundations B", time: "12:30 PM-4:00 PM" },
     foundations_c: { name: "Foundations C", time: "9:00 AM-12:30 PM" },
     little_lambs_a: { name: "Little Lambs A", time: "9:00 AM-11:15 AM" },
     little_lambs_b: { name: "Little Lambs B", time: "9:00 AM-11:15 AM" },
-    barn_owls: { name: "Barn Owls", time: "" },
+    barn_owls: { name: "Barn Owls", time: "9:00 AM-12:30 PM" },
     sacred_art: { name: "Sacred Art", time: "9:00 AM-12:30 PM" },
     art_cafe: { name: "Art Café", time: "9:30 AM-2:30 PM" }
   };
@@ -57,8 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "2026-12-15": ["little_lambs_b"],
     "2026-12-16": ["foundations_b"],
     "2026-12-17": ["sacred_art"],
-    "2026-12-18": ["foundations_c"],
-    "2026-12-21": ["foundations_a"]
+    "2026-12-18": ["foundations_c"]
   };
 
   const semester = [
